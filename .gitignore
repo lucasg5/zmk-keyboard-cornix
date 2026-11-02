@@ -7,3 +7,12 @@ result
 target
 
 firmware
+.west/
+build/
+modules/
+optional/
+zephyr/
+zmk/
+zmk-*/
+zmk-helpers/
+*.uf2
