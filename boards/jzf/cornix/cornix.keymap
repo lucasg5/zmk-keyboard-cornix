@@ -60,10 +60,10 @@
         // Default Layer.
         layer0 {
             bindings = <
-&kp TAB    &kp Q    &kp W     &kp E     &kp R  &kp T                                    &kp Y     &kp U        &kp I        &kp O    &kp P      &kp BSPC
-&kp ESC    &kp A    &kp S     &kp D     &kp F  &kp G                                    &kp H     &kp J        &kp K        &kp L    &kp SEMI   &kp RET 
-&kp LSHFT  &kp Z    &kp X     &kp C     &kp V  &kp B          &kp CAPSLOCK  &kp K_MUTE  &kp N     &kp M        &kp COMMA      &kp DOT  &kp FSLH &kp INSERT
-&kp LCTRL  &kp LALT &mo 4  &mo 1     &lt 3 SPACE &kp LGUI                            &kp LCTRL &lt 3 SPACE  &mo 2 &kp TAB  &trans    &trans
+&kp TAB    &kp Q    &kp W  &kp E &kp R       &kp T                             &kp Y     &kp U       &kp I      &kp O       &kp P    &kp BSPC
+&kp ESC    &kp A    &kp S  &kp D &kp F       &kp G                             &kp H     &kp J       &kp K      &kp L       &kp SEMI &kp RET
+&kp LSHFT  &kp Z    &kp X  &kp C &kp V       &kp B    &kp K_MUTE  &kp PAGE_UP  &kp N     &kp M       &kp COMMA  &kp DOT     &kp FSLH &kp QUESTION
+&tog 5     &kp LALT &tog 4 &mo 1 &lt 3 SPACE &kp LGUI                          &kp LCTRL &lt 3 SPACE &mo 2      &kp PAGE_UP &kp BSLH &kp PAGE_DOWN
             >;
 
             sensor-bindings =
@@ -74,29 +74,29 @@
         // Red layer -- symbols
         layer1 {
             bindings = <
-&kp GRAVE &shft_f1 &shft_f2 &shft_f3 &shft_f4 &shft_f5                          &shft_f6    &shft_f7    &shft_f8  &shft_f9  &shft_f10  &kp BSPC
-&kp HASH  &kp AT   &kp EXCL &kp AMPS &kp DLLR &kp PIPE                          &kp ASTRK   &kp MINUS   &kp UNDER &kp EQUAL &kp LPAR   &kp RPAR
-&kp SINGLE_QUOTE &kp LT &kp GT &kp TILDE   &kp FSLH &kp PERCENT &trans  &trans  &kp DOUBLE_QUOTES &kp PLUS  &kp LBKT  &kp RBKT   &kp LBRC  &kp RBRC 
-&trans      &trans        &trans        &trans        &trans        &trans                    &trans  &trans    &trans &trans     &trans  &trans
+&kp GRAVE &shft_f1 &shft_f2  &shft_f3  &shft_f4  &shft_f5                   &shft_f6    &shft_f7   &shft_f8  &shft_f9         &shft_f10         &kp BSPC
+&kp HASH  &kp AT   &kp EXCL  &kp AMPS  &kp PIPE  &kp DLLR                   &kp ASTRK   &kp MINUS  &kp UNDER &kp SINGLE_QUOTE &kp DOUBLE_QUOTES &kp PLUS
+&kp LBKT  &kp RBKT &kp CARET &kp TILDE &kp EQUAL &kp PERCENT &trans  &trans &kp LPAR    &kp RPAR   &kp LT    &kp GT           &kp LBRC          &kp RBRC
+&trans    &trans   &trans    &trans    &trans    &trans                     &trans      &trans     &trans    &trans           &trans            &trans
             >;
         };
 
         // Layer green -- navigation
         layer2 {
             bindings = <
-&bt BT_CLR    &kp PG_UP  &kp PG_DN   &kp RA(E)   &trans     &kp RA(N5)               &kp RA(Y)  &kp RA(U)  &kp RA(I)      &kp RA(O)  &kp RA(P) &trans
-&bt BT_SEL 0  &kp RA(A)  &trans      &kp HOME    &kp END    &trans                   &kp LEFT   &kp DOWN   &kp UP         &kp RIGHT  &trans    &trans 
-&bt BT_SEL 1  &trans     &trans      &kp LC(C)   &kp LC(V)  &trans      &none &none  &kp RA(N)  &kp PLUS   &kp RA(COMMA)  &trans     &trans    &trans 
-&bt BT_SEL 2  &trans     &trans      &trans      &trans     &trans                   &trans     &trans     &trans         &trans     &trans    &trans
+&bt BT_CLR    &kp LC(LEFT) &kp LC(RIGHT)     &trans    &kp RA(N5)    &trans                    &kp RA(Y)  &kp RA(U)  &kp RA(I)  &kp RA(O)  &kp RA(P) &trans
+&bt BT_SEL 0  &kp RA(A)    &kp PG_UP         &kp PG_DN &kp HOME      &kp END                   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &trans    &trans
+&bt BT_SEL 1  &trans       &kp LC(LS(SPACE))           &kp RA(COMMA) &trans     &trans     &trans  &trans &kp RA(N)  &trans     &kp RA(COMMA)  &trans &trans    &trans
+&bt BT_SEL 2  &trans       &trans            &trans    &trans     &trans                    &trans     &trans     &trans         &trans &trans    &trans
             >;
         };
 
         // Layer spacebar -- apps and desktop manager
         layer3 {
             bindings = <
-&trans  &trans     &trans      &trans     &kp LS(TAB) &kp LC(PG_DN)                           &ala_vim_dec &ala_vim_inc  &kp LS(INS) &kp LC(LS(C)) &kp LC(LS(V)) &trans 
-&trans  &trans     &trans      &trans     &kp RET     &kp BSPC                                &kp BSPC     &kp RET       &trans      &trans        &trans        &trans 
-&trans  &kp LG(N1) &kp LG(N2)  &kp LG(N3) &kp LG(N4)  &kp LG(N5)   &kp CAPSLOCK  &kp K_MUTE   &kp LG(N6)   &kp LG(N7)    &kp LG(N8)  &kp LG(N9)    &kp LG(N0)    &kp ESC
+&trans  &trans     &trans      &trans     &kp LS(TAB) &kp LC(PG_DN)                &ala_vim_dec &ala_vim_inc  &kp LS(INS) &kp LC(LS(C)) &kp LC(LS(V)) &trans
+&trans  &trans     &trans      &trans     &kp RET     &kp BSPC                     &kp BSPC     &kp RET       &trans      &trans        &trans        &trans
+&trans  &kp LG(N1) &kp LG(N2)  &kp LG(N3) &kp LG(N4)  &kp LG(N5)    &trans  &trans &kp LG(N6)   &kp LG(N7)    &kp LG(N8)  &kp LG(N9)    &kp LG(N0)    &kp ESC
 &trans  &trans     &trans      &trans     &trans      &trans                                  &trans       &trans        &trans      &trans        &trans        &trans
             >;
         }; // layer 3
@@ -104,11 +104,21 @@
         // Mouse layer (Layer 4)
         layer4 {
             bindings = <
-&trans  &trans     &trans       &trans       &trans          &trans                                &mkp MB4        &msc SCRL_UP    &trans          &trans           &trans  &trans
-&trans  &trans     &mkp MB3     &mkp MB2     &mkp MB1        &trans                                &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &trans  &trans
-&trans  &trans     &trans       &trans       &msc SCRL_LEFT  &msc SCRL_RIGHT   &trans     &trans   &mkp MB5        &msc SCRL_DOWN  &trans          &trans           &trans  &trans
-&trans  &trans     &trans       &trans       &trans          &trans                                &trans          &trans          &trans          &trans           &trans  &trans
+&trans  &trans     &trans       &trans    &trans          &trans                        &mkp MB2        &msc SCRL_UP    &mkp MB4        &trans           &trans  &trans
+&trans  &trans     &mkp MB3     &mkp MB2  &mkp MB1        &trans                        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &trans  &trans
+&trans  &trans     &trans       &trans    &msc SCRL_LEFT  &msc SCRL_RIGHT &trans &trans &mkp MB1        &msc SCRL_DOWN  &mkp MB5        &trans           &trans  &trans
+&trans  &trans     &trans       &trans    &trans          &trans                        &trans          &trans          &trans          &trans           &trans  &trans
+            >;
+        };
+
+        // Numpad Layer (Layer 5)
+        layer5 {
+            bindings = <
+&trans  &trans     &trans     &trans    &trans   &trans               &kp COMMA  &kp N7     &kp N8     &kp N9     &kp BSPC   &trans
+&trans  &kp PLUS   &kp MINUS  &kp ASTRK &kp FSLH &trans               &kp N0     &kp N4     &kp N5     &kp N6     &kp RET    &trans
+&trans  &trans     &trans     &trans    &trans   &trans &trans &trans &kp DOT    &kp N1     &kp N2     &kp N3     &kp EQUAL  &trans
+&trans  &trans     &trans     &trans    &trans   &trans               &trans     &trans     &kp DOT    &trans     &trans     &trans
             >;
         };
     }; // keymap
-}; // close root 
+}; // close root
